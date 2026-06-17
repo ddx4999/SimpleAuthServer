@@ -4,13 +4,13 @@ EXPOSE 8080
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["SimpleAuthServer.csproj", "."]
-RUN dotnet restore "./SimpleAuthServer.csproj"
+COPY ["SimpleAuthServer.Server.csproj", "."]
+RUN dotnet restore "./SimpleAuthServer.Server.csproj"
 COPY . .
-RUN dotnet build "SimpleAuthServer.csproj" -c Release -o /app/build
+RUN dotnet build "SimpleAuthServer.Server.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "SimpleAuthServer.csproj" -c Release -o /app/publish
+RUN dotnet publish "SimpleAuthServer.Server.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
