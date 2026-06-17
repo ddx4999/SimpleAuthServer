@@ -1,0 +1,5 @@
+{
+  "appHost": {
+    "path": "SimpleAuthServer.AppHost/SimpleAuthServer.AppHost.csproj"
+  }
+}

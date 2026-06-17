@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SimpleAuthServer.AppHost/SimpleAuthServer.AppHost.csproj" />
+  <Project Path="SimpleAuthServer.Server/SimpleAuthServer.Server.csproj" />
+</Solution>
